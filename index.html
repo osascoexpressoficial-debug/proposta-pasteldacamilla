@@ -305,6 +305,8 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
     </div>
     <div class="nav-right">
       <div class="nav-tag">Proposta Confidencial · Pastel da Camila</div>
+      <button onclick="openTrib()" style="background:transparent;color:var(--text-secondary);border:1px solid var(--border);font-family:'Sora',sans-serif;font-weight:700;font-size:12px;padding:8px 16px;border-radius:20px;cursor:pointer;transition:all 0.2s;letter-spacing:0.03em;">📄 Inf. Tributárias</button>
+      <button onclick="openContrato()" style="background:transparent;color:var(--text-secondary);border:1px solid var(--border);font-family:'Sora',sans-serif;font-weight:700;font-size:12px;padding:8px 16px;border-radius:20px;cursor:pointer;transition:all 0.2s;letter-spacing:0.03em;">📋 Contrato do Entregador</button>
       <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+quero+confirmar+a+proposta+Osasco+Express" class="nav-cta">Quero continuar →</a>
     </div>
   </div>
@@ -940,6 +942,225 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
   </div>
 </section>
 
+
+
+<!-- MODAL CONTRATO ENTREGADOR -->
+<div id="contrato-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#0d0d0d;border-radius:16px;max-width:720px;width:100%;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+    <!-- CABEÇALHO CONTRATO -->
+    <div style="background:#111;padding:0 28px;border-bottom:1px solid #222;">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 0 10px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:28px;height:28px;border-radius:7px;background:#ea1d2c;display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M8 1.5C8 1.5 3 5 3 9.5a5 5 0 0010 0C13 5 8 1.5 8 1.5z" fill="white"/><circle cx="8" cy="9.5" r="1.8" fill="#ea1d2c"/></svg>
+          </div>
+          <span style="font-family:'Sora',sans-serif;font-weight:800;font-size:14px;color:white;">Osasco Express</span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button onclick="printContrato()" style="background:transparent;color:#666;border:1px solid #333;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;">🖨️ Imprimir</button>
+          <button onclick="closeContrato()" style="background:#ea1d2c;color:white;border:none;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;">✕ Fechar</button>
+        </div>
+      </div>
+      <div style="padding-bottom:16px;border-top:1px solid #1a1a1a;padding-top:12px;">
+        <div style="font-size:10px;letter-spacing:2px;color:#ff6b74;font-weight:700;margin-bottom:4px;text-transform:uppercase;">Transparência Operacional</div>
+        <div style="font-family:'Sora',sans-serif;font-size:18px;font-weight:900;color:white;line-height:1.2;">Contrato do Entregador</div>
+        <div style="font-size:12px;color:#555;margin-top:4px;">Como formalizamos cada parceiro que atua na sua operação</div>
+      </div>
+    </div>
+    <div id="contrato-content" style="overflow-y:auto;padding:28px;display:flex;flex-direction:column;gap:16px;">
+
+      <!-- INTRO -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:white;margin-bottom:8px;">Por que estamos mostrando isso</div>
+        <div style="font-size:13px;color:#aaa;line-height:1.7;">Este é o contrato que formalizamos com cada entregador que atua na sua operação. Queremos que você veja como a relação é estruturada — e entenda por que sua empresa não assume nenhuma responsabilidade trabalhista sobre eles.</div>
+      </div>
+
+      <!-- CABEÇALHO -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#555;margin-bottom:12px;">Contrato de Prestação de Serviços Autônomos</div>
+        <div style="font-family:'Sora',sans-serif;font-size:18px;font-weight:900;color:white;margin-bottom:16px;">Osasco Express Serviços Ltda – ME</div>
+        <div style="font-size:13px;color:#aaa;line-height:1.8;">
+          <strong style="color:#ccc;">Contratante:</strong> Osasco Express Serviços Ltda – ME · CNPJ 54.707.097/0001-04 · Osasco/SP<br>
+          <strong style="color:#ccc;">Contratado:</strong> Parceiro entregador · dados preenchidos no ato da assinatura
+        </div>
+      </div>
+
+      <!-- CLÁUSULAS -->
+      <div style="display:flex;flex-direction:column;gap:10px;">
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 1 — Objeto</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">Prestação autônoma de serviços de coleta, transporte e entrega de mercadorias no âmbito da operação logística organizada pela Osasco Express.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 2 — Natureza Jurídica</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">Contrato de natureza estritamente civil. Não há relação de emprego entre as partes — inexistem subordinação jurídica, pessoalidade obrigatória, habitualidade compulsória ou salário fixo. O parceiro atua por conta própria e assume os riscos da sua atividade.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 3 — Autonomia</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">O parceiro define seus próprios dias e horários, pode aceitar ou recusar demandas e prestar serviços a terceiros, inclusive concorrentes. A Osasco Express não exerce controle de jornada nem exige exclusividade.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 4 — Substituição</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">O parceiro pode indicar outro entregador cadastrado para substituí-lo. Fica expressamente afastada a obrigatoriedade de execução pessoal — reforçando a natureza autônoma da prestação.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 5 — Remuneração</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">Remuneração variável conforme produção efetivamente realizada — valor por entrega, distância, diárias ou incentivos. Não há salário fixo, garantia de renda ou volume mínimo obrigatório.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 6 — Pagamento</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">Fechamento semanal com pagamento via PIX às terças-feiras, com base nos registros do sistema.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 7 — Meios de Trabalho</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">O parceiro executa os serviços com meios próprios — veículo, combustível, manutenção, celular e documentação. A Osasco Express não fornece equipamentos.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 8 — Responsabilidade Civil</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">O parceiro responde por danos decorrentes de dolo ou culpa no exercício da atividade. A relação é exclusivamente com a Osasco Express — não com os estabelecimentos atendidos.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 9 — Vigência e Rescisão</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">Prazo indeterminado. Rescisão possível por qualquer das partes a qualquer momento, sem ônus.</div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:12px;padding:20px;">
+          <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:#ea1d2c;margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Cláusula 10 — Foro</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.7;">Comarca de Osasco – SP.</div>
+        </div>
+
+      </div>
+
+      <!-- RODAPÉ CONTRATO -->
+      <div style="background:#111;border-top:1px solid #222;border-radius:0 0 12px 12px;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <div style="font-size:11px;color:#444;line-height:1.6;">
+          Osasco Express Serviços Ltda – ME · CNPJ 54.707.097/0001-04<br>
+          Av. Diogo Antônio Feijó, 855 — Osasco, SP · contato@osascoexpress.com.br
+        </div>
+        <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+tenho+d%C3%BAvidas+sobre+o+contrato+dos+entregadores" style="display:inline-flex;align-items:center;gap:8px;background:#ea1d2c;color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:12px;white-space:nowrap;">Falar com a gente →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TRIBUTÁRIO -->
+<div id="trib-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#0d0d0d;border-radius:16px;max-width:720px;width:100%;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+    <!-- header -->
+    <!-- CABEÇALHO TRIBUTÁRIO -->
+    <div style="background:#111;padding:0 28px;border-bottom:1px solid #222;">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 0 10px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:28px;height:28px;border-radius:7px;background:#ea1d2c;display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M8 1.5C8 1.5 3 5 3 9.5a5 5 0 0010 0C13 5 8 1.5 8 1.5z" fill="white"/><circle cx="8" cy="9.5" r="1.8" fill="#ea1d2c"/></svg>
+          </div>
+          <span style="font-family:'Sora',sans-serif;font-weight:800;font-size:14px;color:white;">Osasco Express</span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button onclick="printTrib()" style="background:transparent;color:#666;border:1px solid #333;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;">🖨️ Imprimir</button>
+          <button onclick="closeTrib()" style="background:#ea1d2c;color:white;border:none;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;">✕ Fechar</button>
+        </div>
+      </div>
+      <div style="padding-bottom:16px;border-top:1px solid #1a1a1a;padding-top:12px;">
+        <div style="font-size:10px;letter-spacing:2px;color:#ff6b74;font-weight:700;margin-bottom:4px;text-transform:uppercase;">Segurança Fiscal e Jurídica</div>
+        <div style="font-family:'Sora',sans-serif;font-size:18px;font-weight:900;color:white;line-height:1.2;">Informações Tributárias</div>
+        <div style="font-size:12px;color:#555;margin-top:4px;">Como funciona a parte fiscal e trabalhista dessa parceria</div>
+      </div>
+    </div>
+    <!-- content -->
+    <div id="trib-content" style="overflow-y:auto;padding:28px;display:flex;flex-direction:column;gap:16px;">
+
+      <!-- INTRO -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:white;margin-bottom:8px;">Como funciona a parte fiscal e trabalhista dessa parceria</div>
+        <div style="font-size:13px;color:#888;line-height:1.7;">Explicamos tudo com clareza para você entender antes de assinar — e confirmar com seu contador se quiser.</div>
+      </div>
+
+      <!-- BLOCO 1 -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:white;margin-bottom:10px;">O que é essa contratação</div>
+        <div style="font-size:13px;color:#ccc;line-height:1.7;">Você está contratando uma empresa para prestar serviços de entrega. É uma relação entre dois CNPJs — o seu e o da Osasco Express. Isso se chama contrato B2B e é o modelo mais comum para esse tipo de operação.<br><br><span style="color:#666;font-size:12px;">Base: Art. 593 do Código Civil</span></div>
+      </div>
+
+      <!-- BLOCO 2 -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:white;margin-bottom:10px;">Você tem alguma responsabilidade com os entregadores?</div>
+        <div style="font-size:13px;color:#ccc;line-height:1.7;">Não. Os entregadores são parceiros da Osasco Express — não funcionários do Pastel da Camila. Qualquer questão trabalhista, de seguro ou previdenciária é responsabilidade exclusiva da Osasco Express. Sua empresa não responde por isso.<br><br><span style="color:#666;font-size:12px;">Base: Art. 4º-A da Lei 13.467/2017</span></div>
+      </div>
+
+      <!-- BLOCO 3 — TABELA -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:white;margin-bottom:14px;">O que você paga — e o que recebe como documento</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:0.06em;padding:0 4px;">
+            <span>O que você paga</span><span>Documento que recebe</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#111;border-radius:8px;padding:12px 14px;font-size:13px;color:#ccc;">Taxa de gestão</div>
+            <div style="background:#111;border-radius:8px;padding:12px 14px;font-size:13px;color:#4ade80;">Nota fiscal de serviço com ISS</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#111;border-radius:8px;padding:12px 14px;font-size:13px;color:#ccc;">Diárias dos entregadores</div>
+            <div style="background:#111;border-radius:8px;padding:12px 14px;font-size:13px;color:#facc15;">Relatório semanal discriminado</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#111;border-radius:8px;padding:12px 14px;font-size:13px;color:#ccc;">Taxa por km rodado</div>
+            <div style="background:#111;border-radius:8px;padding:12px 14px;font-size:13px;color:#facc15;">Relatório por entrega com distância real</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:#666;margin-top:12px;line-height:1.6;">Seu contador usa esses documentos para lançar tudo como despesa operacional logística.</div>
+      </div>
+
+      <!-- BLOCO 4 -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:white;margin-bottom:10px;">Como seu contador vai lançar isso</div>
+        <div style="font-size:13px;color:#ccc;line-height:1.7;">No Lucro Real, toda despesa com documentação hábil é dedutível. A nota fiscal da taxa de gestão entra como despesa com serviços de terceiros. O relatório semanal ampara o lançamento das diárias e do custo por km. Tudo dentro do que a Receita Federal aceita.<br><br><span style="color:#666;font-size:12px;">Base: Art. 299 RIR/2018 · Lei 9.430/96</span></div>
+      </div>
+
+      <!-- BLOCO 5 — BASE LEGAL -->
+      <div style="background:#1a1a1a;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:white;margin-bottom:14px;">Base legal resumida</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#111;border-radius:8px;">
+            <span style="font-size:13px;color:#aaa;">Contrato entre empresas · sem vínculo empregatício</span>
+            <span style="font-size:11px;font-weight:700;color:#ea1d2c;white-space:nowrap;margin-left:12px;">Art. 593 CC</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#111;border-radius:8px;">
+            <span style="font-size:13px;color:#aaa;">Terceirização lícita · responsabilidade da contratada</span>
+            <span style="font-size:11px;font-weight:700;color:#ea1d2c;white-space:nowrap;margin-left:12px;">Art. 4º-A Lei 13.467/2017</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#111;border-radius:8px;">
+            <span style="font-size:13px;color:#aaa;">Dedutibilidade no Lucro Real</span>
+            <span style="font-size:11px;font-weight:700;color:#ea1d2c;white-space:nowrap;margin-left:12px;">Art. 299 RIR/2018</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#111;border-radius:8px;">
+            <span style="font-size:13px;color:#aaa;">Despesas com documentação fiscal hábil</span>
+            <span style="font-size:11px;font-weight:700;color:#ea1d2c;white-space:nowrap;margin-left:12px;">Lei 9.430/96</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCO FINAL -->
+      <div style="background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:24px;">
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:white;margin-bottom:10px;">Leve isso para seu contador</div>
+        <div style="font-size:13px;color:#aaa;line-height:1.7;">Se tiver qualquer dúvida sobre como funciona o modelo, peça para seu contador revisar. Estamos disponíveis para conversar diretamente com ele se precisar.</div>
+        <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+tenho+d%C3%BAvidas+sobre+a+parte+fiscal+da+proposta" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:#ea1d2c;color:white;padding:12px 24px;border-radius:50px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:13px;">Falar com a gente →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -968,6 +1189,10 @@ function showChart(id, el, color) {
   document.getElementById('chart-' + id).classList.add('active');
   el.classList.add(color === 'b' ? 'ab' : 'ar');
 }
+function openContrato() { document.getElementById('contrato-modal').style.display='flex'; document.body.style.overflow='hidden'; }
+function closeContrato() { document.getElementById('contrato-modal').style.display='none'; document.body.style.overflow=''; }
+function printContrato() { var c=document.getElementById('contrato-content').innerHTML; var w=window.open('','_blank'); w.document.write('<html><head><title>Contrato do Entregador</title><style>body{font-family:sans-serif;background:#0d0d0d;color:white;padding:40px}h2{color:white}p,li{color:#ccc}</style></head><body>'+c+'</body></html>'); w.document.close(); w.print(); }
+
 </script>
 </body>
 </html>
