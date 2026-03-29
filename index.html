@@ -281,20 +281,84 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 .footer-links a:hover { color: var(--red); }
 .footer-legal { width: 100%; padding-top: 20px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-secondary); line-height: 1.6; }
 @media (max-width: 768px) {
-  section { padding: 52px 0; }
-  .hero-inner { padding: 56px 0 48px; }
-  .hero h1 { font-size: 36px; }
-  .hero-stats { grid-template-columns: 1fr 1fr; }
-  .escala-grid, .custo-grid, .fin-grid, .taxa-grid, .diaria-pair, .partes-grid { grid-template-columns: 1fr; }
-  .gestao-grid, .tech-grid { grid-template-columns: 1fr; }
+  section { padding: 40px 0; }
+  .container { padding: 0 16px; }
+
+  /* NAV */
+  .nav-inner { padding: 0 16px; height: 56px; }
+  .nav-tag { display: none; }
+  .nav-right button { font-size: 11px; padding: 6px 10px; }
+  .nav-cta { font-size: 12px; padding: 7px 14px; }
+
+  /* HERO */
+  .hero-inner { padding: 40px 0 36px; }
+  .hero h1 { font-size: clamp(28px, 7vw, 38px); letter-spacing: -0.02em; }
+  .hero-lead { font-size: 15px; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hero-stats .hero-stat-card:last-child { grid-column: 1 / -1; }
+  .hsc-val { font-size: 22px; }
+  .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .btn-primary { font-size: 14px; padding: 13px 24px; width: 100%; justify-content: center; }
+  .hero-parties { flex-direction: column; }
+
+  /* SEÇÕES */
+  .sec-header h2 { font-size: clamp(22px, 5vw, 30px); }
+  .sec-header p { font-size: 14px; }
+
+  /* GRIDS */
+  .escala-grid,
+  .custo-grid,
+  .fin-grid,
+  .taxa-grid,
+  .diaria-pair,
+  .partes-grid,
+  .vigencia-grid { grid-template-columns: 1fr; }
+
+  .gestao-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gestao-card.rec { transform: none; }
   .gestao-inc-grid { grid-template-columns: 1fr; }
-  .nav-right .nav-tag { display: none; }
-  .cta-final { padding: 40px 24px; }
-  .passos { grid-template-columns: 1fr; }
-  .cta-final-stats { gap: 20px; }
-  .fin-box { padding: 28px 20px; }
-  .vigencia-box { padding: 32px 20px; }
-  .footer-links { flex-wrap: wrap; gap: 12px; }
+  .tech-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  /* ESCALA */
+  .erow { grid-template-columns: 100px 1fr auto; gap: 8px; padding: 11px 14px; }
+  .erow-num { font-size: 18px; }
+
+  /* FINANCEIRO */
+  .fin-box { padding: 24px 16px; }
+  .fin-val { font-size: 18px; }
+
+  /* VIGÊNCIA */
+  .vigencia-box { padding: 28px 16px; }
+  .vig-pills { gap: 8px; }
+  .vig-pill { font-size: 12px; padding: 6px 10px; }
+
+  /* RESUMO */
+  .inv-row { flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 20px; }
+  .inv-row-val { font-size: 16px; }
+  .inv-badges { gap: 8px; padding: 16px 20px; }
+
+  /* CTA FINAL */
+  .cta-final { padding: 36px 20px; border-radius: 12px; }
+  .cta-final h2 { font-size: clamp(20px, 5vw, 28px); }
+  .cta-final p { font-size: 14px; }
+  .cta-final-stats { gap: 16px; }
+  .cfs-val { font-size: 22px; }
+  .passos { grid-template-columns: 1fr; gap: 8px; }
+  .btn-cta { font-size: 14px; padding: 14px 28px; width: 100%; justify-content: center; }
+  .cta-quote { font-size: 14px; padding: 14px 18px; }
+
+  /* DIÁRIAS */
+  .diaria-val { font-size: 40px; }
+
+  /* FOOTER */
+  .footer-inner { flex-direction: column; gap: 16px; }
+  .footer-links { flex-wrap: wrap; gap: 10px; }
+
+  /* MODAIS */
+  #trib-modal > div,
+  #contrato-modal > div { max-height: 95vh; border-radius: 12px; }
+  #trib-content,
+  #contrato-content { padding: 20px 16px; }
 }
 </style>
 </head>
