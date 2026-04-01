@@ -382,6 +382,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
     <div class="nav-right">
       <div class="nav-tag">Proposta Confidencial · Pastel da Camila</div>
       <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+quero+confirmar+a+proposta+Osasco+Express" class="nav-cta">Quero começar →</a>
+      <button onclick="abrirContrato()" style="background:none;border:1.5px solid var(--border);color:var(--text);font-family:'Sora',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;border-radius:20px;cursor:pointer;transition:all 0.15s;">📄 Ver Contrato</button>
     </div>
   </div>
 </nav>
@@ -741,7 +742,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         <div class="taxa-row"><span class="taxa-km">10 km</span><span class="taxa-val hi">R$ 16,00</span></div>
         <div class="taxa-row"><span class="taxa-km">11 km</span><span class="taxa-val hi">R$ 16,00</span></div>
         <div class="taxa-row"><span class="taxa-km">12 km</span><span class="taxa-val hi">R$ 16,00</span></div>
-        <div class="taxa-row"><span class="taxa-km">13 km</span><span class="taxa-val hi">R$ 20,00</span></div>
+
       </div>
     </div>
     <div class="callout green" style="margin-top:16px;">
@@ -825,7 +826,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         </div>
         <div class="inv-row">
           <div class="inv-row-label"><strong>Entregas variável</strong>~1.050 entregas × km real médio</div>
-          <div class="inv-row-val">≈ R$ 5.800</div>
+          <div class="inv-row-val">≈ R$ 7.080</div>
         </div>
         <div class="inv-row">
           <div class="inv-row-label"><strong>Taxa administrativa</strong>Perfil atual: até 1.800 entregas</div>
@@ -833,14 +834,14 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         </div>
         <div class="inv-row total-row">
           <div class="inv-row-label"><strong>Total mensal estimado</strong></div>
-          <div class="inv-row-val">≈ R$ 16.339</div>
+          <div class="inv-row-val">≈ R$ 17.619</div>
         </div>
       </div>
       <div class="inv-badges">
         <div class="inv-badge"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00875a" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#00875a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Nota fiscal emitida todo mês</div>
-        <div class="inv-badge"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00875a" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#00875a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Relatório de entregas todo dia 1</div>
+        <div class="inv-badge"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00875a" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#00875a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Relatório semanal toda segunda-feira</div>
         <div class="inv-badge"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00875a" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#00875a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Falta coberta — você não resolve</div>
-        <div class="inv-badge"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00875a" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#00875a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Vencimento dia 30</div>
+        <div class="inv-badge"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00875a" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#00875a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Fechamento e pagamento toda segunda-feira</div>
       </div>
     </div>
   </div>
@@ -877,6 +878,12 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
       <div class="tech-card">
         <div class="tech-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="#ea1d2c" stroke-width="1.5"/><path d="M7 9h6M7 12h4" stroke="#ea1d2c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="tech-tag">Toda segunda-feira</div>
+        <div class="tech-title">Relatório semanal + fechamento</div>
+        <div class="tech-desc">Relatório de entregas com demonstrativo financeiro da semana. Você sabe exatamente o que deve — antes de pagar.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="#ea1d2c" stroke-width="1.5"/><path d="M7 9h6M7 12h4" stroke="#ea1d2c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div class="tech-tag">Todo dia 1</div>
         <div class="tech-title">Relatório mensal completo</div>
         <div class="tech-desc">Total de entregas, tempo médio, ocorrências e custo consolidado. Tudo documentado, auditável e sem surpresa.</div>
@@ -899,11 +906,95 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 
 <div class="divider"></div>
 
-<!-- 08 TIMELINE -->
+<!-- 08 TRIBUTÁRIO -->
+<section style="background:var(--text);">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-kicker" style="color:#ff6b74;">08 — Segurança Fiscal e Jurídica</div>
+      <h2 style="color:var(--white);">Como funciona o modelo<br><em style="color:#ff6b74;">tributário da operação</em></h2>
+      <p style="color:rgba(255,255,255,0.6);">Estruturamos a operação para garantir conformidade legal, eficiência tributária e segurança total para o cliente.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:28px;">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;">Natureza da Operação</div>
+        <p style="color:rgba(255,255,255,0.85);font-size:15px;line-height:1.65;">A Osasco Express atua como <strong style="color:white;">intermediadora logística e gestora operacional</strong>, realizando prestação de serviços entre pessoas jurídicas (B2B).</p>
+        <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:10px;">Base legal: Código Civil (Lei nº 10.406/2002)</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:28px;">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;">Relação com Entregadores</div>
+        <p style="color:rgba(255,255,255,0.85);font-size:15px;line-height:1.65;">Os entregadores são <strong style="color:white;">prestadores autônomos (parceiros independentes)</strong>, sem vínculo empregatício.</p>
+        <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:8px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff6b74;flex-shrink:0;display:inline-block;"></span>Sem exclusividade</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:8px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff6b74;flex-shrink:0;display:inline-block;"></span>Uso de meios próprios</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:8px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff6b74;flex-shrink:0;display:inline-block;"></span>Liberdade de atuação</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:8px;"><span style="width:5px;height:5px;border-radius:50%;background:#ff6b74;flex-shrink:0;display:inline-block;"></span>Remuneração por produtividade</div>
+        </div>
+        <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:12px;">Base legal: CLT (ausência de subordinação, pessoalidade e habitualidade)</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:28px;">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;">Estrutura Tributária</div>
+        <p style="color:rgba(255,255,255,0.85);font-size:15px;line-height:1.65;margin-bottom:16px;">A operação é dividida em duas naturezas financeiras:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.2);border-radius:var(--radius-sm);padding:14px 16px;">
+            <div style="font-size:13px;font-weight:700;color:#4ade80;margin-bottom:4px;">Receita tributável</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.65);">Taxa de gestão logística e operação</div>
+          </div>
+          <div style="background:rgba(250,204,21,0.08);border:1px solid rgba(250,204,21,0.2);border-radius:var(--radius-sm);padding:14px 16px;">
+            <div style="font-size:13px;font-weight:700;color:#facc15;margin-bottom:4px;">Repasse operacional</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.65);">Custos de entregadores e execução logística</div>
+          </div>
+        </div>
+        <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:12px;">Tributação conforme Simples Nacional (ISS incluso)</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:28px;">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;">Como o cliente fica protegido</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;">
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Nota fiscal da prestação de serviço</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Relatório completo das operações</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Controle total dos custos logísticos</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Documentação auditável pelo contador</div>
+        </div>
+        <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Permite que o contador registre corretamente todas as despesas da operação.</p>
+      </div>
+
+    </div>
+
+    <!-- EMISSÃO + ALERTA -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:28px;">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;">Emissão de documentos mensais</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><rect x="2" y="2" width="12" height="12" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/><path d="M5 6h6M5 9h4" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" stroke-linecap="round"/></svg>Nota fiscal da taxa de gestão</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><rect x="2" y="2" width="12" height="12" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/><path d="M5 6h6M5 9h4" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" stroke-linecap="round"/></svg>Relatório operacional detalhado</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;flex-shrink:0;"><rect x="2" y="2" width="12" height="12" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/><path d="M5 6h6M5 9h4" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" stroke-linecap="round"/></svg>Fechamento financeiro completo</div>
+        </div>
+      </div>
+      <div style="background:var(--red);border-radius:var(--radius);padding:28px;">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;">Importante</div>
+        <p style="color:var(--white);font-size:15px;line-height:1.65;font-weight:500;">A estrutura evita tributação indevida sobre valores operacionais, garantindo eficiência fiscal e preservação de margem.</p>
+        <p style="color:rgba(255,255,255,0.75);font-size:13px;margin-top:10px;line-height:1.6;">Todo o modelo é validado conforme legislação vigente e práticas adotadas por grandes plataformas do mercado.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;padding:40px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);">
+      <h3 style="font-family:'Sora',sans-serif;font-size:24px;font-weight:800;color:var(--white);letter-spacing:-0.02em;margin-bottom:10px;">Operação estruturada não é custo.<br>É proteção do seu lucro.</h3>
+      <p style="color:rgba(255,255,255,0.6);font-size:15px;">Conformidade fiscal total desde o primeiro dia de operação.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 09 TIMELINE -->
 <section style="background:var(--white);">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-kicker">08 — Início da operação</div>
+      <div class="sec-kicker">09 — Início da operação</div>
       <h2>Do aceite até a primeira<br>entrega estruturada.</h2>
       <p>Sem burocracia, sem demora.</p>
     </div>
@@ -960,7 +1051,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 <section>
   <div class="container">
     <div class="vigencia-box">
-      <div class="sec-kicker">09 — Vigência e Condições</div>
+      <div class="sec-kicker">10 — Vigência e Condições</div>
       <h2 style="color:var(--white);margin-top:8px;font-size:clamp(22px,3vw,30px);letter-spacing:-0.02em;">Tudo documentado. Tudo dentro da lei.</h2>
       <p style="color:rgba(255,255,255,0.65);font-size:15px;max-width:540px;margin-top:12px;line-height:1.65;">
         Vigência inicial de <strong style="color:rgba(255,255,255,0.95);">12 (doze) meses</strong> a partir do início da operação. Modelo mensal recorrente com início após aceite e contrato assinado.
@@ -1005,7 +1096,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
 <section style="background:var(--white);">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-kicker">10 — Partes da Proposta</div>
+      <div class="sec-kicker">11 — Partes da Proposta</div>
       <h2>Prestadora e Contratante</h2>
     </div>
     <div class="partes-grid">
@@ -1016,7 +1107,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
           Osasco Express Serviços Ltda – ME<br>
           CNPJ: <strong>54.707.097/0001-04</strong><br>
           Av. Diogo Antônio Feijó, 855 — Osasco, SP<br>
-          <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e0d01001a0f1a012e011d0f1d0d010b161e1c0b1d1d400d0103400c1c">[email&#160;protected]</a></strong><br>
+          <strong><a href="mailto:contato@osascoexpress.com.br">contato@osascoexpress.com.br</a></strong><br>
           (11) 98666-1784 · www.osascoexpress.com.br
         </div>
       </div>
@@ -1072,13 +1163,298 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       <div class="footer-brand">Osasco Express</div>
       <div class="footer-info">
         CNPJ 54.707.097/0001-04 · Av. Diogo Antônio Feijó, 855 — Osasco, SP<br>
-        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a2aeafb5a0b5ae81aeb2a0b2a2aea4b9b1b3a4b2b2efa2aeacefa3b3">[email&#160;protected]</a> · (11) 98666-1784
+        <a href="mailto:contato@osascoexpress.com.br">contato@osascoexpress.com.br</a> · (11) 98666-1784
       </div>
     </div>
-    <div class="footer-links">
+        <div class="footer-links">
       <a href="tel:+5511986661784">(11) 98666-1784</a>
-      <a href="/cdn-cgi/l/email-protection#2e4d41405a4f5a416e415d4f5d4d414b565e5c4b5d5d004d4143004c5c"><span class="__cf_email__" data-cfemail="ceada1a0baafbaa18ea1bdafbdada1abb6bebcabbdbde0ada1a3e0acbc">[email&#160;protected]</span></a>
-      <a href="https://www.osascoexpress.com.br">www.osascoexpress.com.br</a>
+      <a href="mailto:contato@osascoexpress.com.br">contato@osascoexpress.com.br</a>
+      <button onclick="abrirContrato()" style="background:none;border:none;cursor:pointer;font-size:13px;color:var(--text-secondary);text-decoration:underline;">Ver contrato completo</button>
     </div>
-    <div class="footer-legal">
-      <strong>Proposta Comercial Confidencial</strong> · Osasco Express × Pastel da Camila Ltda. · Elaborada com base em dados reais da operação · jan–mar 2026 · Válida por 1
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     MODAL — CONTRATO COMPLETO
+══════════════════════════════════════════ -->
+<div id="modalContrato" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);overflow-y:auto;padding:24px 16px;">
+  <div style="max-width:860px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,0.3);overflow:hidden;">
+
+    <!-- Header do modal -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 28px;border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+      <div>
+        <div style="font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:#111;">Contrato de Prestação de Serviços</div>
+        <div style="font-size:12px;color:#6b7280;margin-top:2px;">Gestão Logística de Delivery · Osasco Express × Pastel da Camila</div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button onclick="imprimirContrato()" style="display:inline-flex;align-items:center;gap:6px;background:#1B3A6B;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;">
+          <svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M5 7V3h10v4M5 15H3a1 1 0 01-1-1V9a1 1 0 011-1h14a1 1 0 011 1v5a1 1 0 01-1 1h-2M5 11h10v6H5v-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Imprimir
+        </button>
+        <button onclick="fecharContrato()" style="background:#f3f4f6;border:none;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#374151;">✕</button>
+      </div>
+    </div>
+
+    <!-- Corpo do contrato -->
+    <div id="contratoBody" style="padding:40px 48px;font-family:'Times New Roman',serif;font-size:13px;line-height:1.8;color:#1a1a1a;">
+
+      <div style="text-align:center;margin-bottom:32px;">
+        <div style="font-size:15px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;">Contrato de Prestação de Serviços</div>
+        <div style="font-size:13px;font-weight:700;text-transform:uppercase;margin-bottom:4px;">Gestão Logística de Delivery</div>
+        <div style="font-size:12px;color:#555;font-style:italic;">Instrumento Particular de Natureza Comercial</div>
+      </div>
+
+      <p style="font-weight:700;text-align:center;margin-bottom:20px;">QUALIFICAÇÃO DAS PARTES</p>
+      <p>Pelo presente instrumento particular, que entre si celebram:</p>
+
+      <table style="width:100%;border-collapse:collapse;margin:16px 0 24px;">
+        <tr><td style="border:1px solid #ccc;padding:10px 14px;font-weight:700;background:#f0f4f8;width:140px;">CONTRATADA</td><td style="border:1px solid #ccc;padding:10px 14px;"><strong>OSASCO EXPRESS SERVIÇOS LTDA – ME</strong><br>CNPJ: 54.707.097/0001-04<br>Endereço: Av. Diogo Antônio Feijó, 855 — Osasco/SP<br>Denominada neste instrumento como: <strong>CONTRATADA</strong></td></tr>
+        <tr><td style="border:1px solid #ccc;padding:10px 14px;font-weight:700;background:#f0f4f8;">CONTRATANTE</td><td style="border:1px solid #ccc;padding:10px 14px;"><strong>PASTEL DA CAMILA LTDA.</strong><br>CNPJ: 22.920.673/0001-00<br>Endereço: Av. Dom Pedro Primeiro, 432 — Vila Osasco, Osasco/SP<br>Denominada neste instrumento como: <strong>CONTRATANTE</strong></td></tr>
+      </table>
+
+      <p>Têm entre si, justo e contratado, o presente Contrato de Prestação de Serviços de Gestão Logística de Delivery, que se regerá pelas cláusulas e condições a seguir estipuladas, de acordo com o Código Civil Brasileiro (Lei nº 10.406/2002) e legislação complementar aplicável.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA PRIMEIRA — DO OBJETO</p>
+      <p>1.1. O presente contrato tem por objeto a prestação, pela CONTRATADA, de serviços especializados de gestão logística de delivery, compreendendo: (i) a estruturação e organização operacional do sistema de entregas da CONTRATANTE; (ii) a coordenação, supervisão e gestão de parceiros entregadores autônomos alocados na operação; (iii) o acompanhamento em tempo real por meio da plataforma tecnológica integrada Foody Delivery; (iv) o suporte operacional contínuo durante os turnos de funcionamento; (v) o controle e gestão da escala de trabalho dos parceiros entregadores; (vi) o registro, tratamento e encaminhamento de ocorrências operacionais; e (vii) a elaboração e apresentação de relatórios periódicos de desempenho logístico.</p>
+      <p>1.2. A prestação dos serviços abrange exclusivamente a gestão logística das entregas realizadas pelo canal próprio de vendas da CONTRATANTE, operado por meio do sistema Web Cardápio ou plataforma equivalente, não incluindo serviços relacionados à produção, embalagem, atendimento ao cliente ou gestão interna do estabelecimento.</p>
+      <p>1.3. A plataforma Foody Delivery possui integração nativa com o sistema Saipos e Web Cardápio, permitindo o recebimento automático de pedidos, o despacho inteligente para os parceiros entregadores disponíveis, o rastreamento em tempo real e o registro histórico das entregas realizadas.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA SEGUNDA — DA NATUREZA JURÍDICA DA RELAÇÃO</p>
+      <p>2.1. A relação estabelecida pelo presente instrumento possui natureza exclusivamente comercial, firmada entre pessoas jurídicas de direito privado, regida pelas disposições do Código Civil Brasileiro, especialmente pelos arts. 593 a 609, e pela Lei nº 13.467/2017, no que concerne à terceirização de atividades.</p>
+      <p>2.2. Não existe, entre as partes, qualquer relação de emprego, subordinação hierárquica, dependência econômica exclusiva ou vínculo de natureza trabalhista ou previdenciária, sendo a CONTRATADA autônoma técnica, operacional e administrativamente na condução dos serviços.</p>
+      <p>2.3. A CONTRATADA é empresa regularmente constituída, com objeto social compatível com os serviços ora contratados, possuindo estrutura própria, meios de trabalho, quadro operacional e capacidade técnica para a execução das obrigações assumidas.</p>
+      <p>2.4. A atividade de gestão logística de delivery não constitui atividade-fim da CONTRATANTE, caracterizando-se como atividade-meio de suporte operacional, o que torna a terceirização plenamente lícita nos termos do art. 4º-A da Lei nº 13.467/2017 e da jurisprudência consolidada dos Tribunais Superiores.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA TERCEIRA — DO MODELO OPERACIONAL E DA PLATAFORMA TECNOLÓGICA</p>
+      <p>3.1. A execução dos serviços será realizada por meio da plataforma Foody Delivery, sistema especializado em gestão logística de delivery que permite o recebimento automatizado de pedidos, despacho inteligente para parceiros entregadores, rastreamento GPS em tempo real, otimização de rotas, controle de múltiplas entregas simultâneas e registro detalhado de todas as operações.</p>
+      <p>3.2. A integração da plataforma Foody Delivery ao sistema Web Cardápio da CONTRATANTE será realizada pela CONTRATADA, sem custo adicional, no prazo de até 5 (cinco) dias úteis contados da assinatura deste instrumento e do pagamento da primeira mensalidade da taxa de gestão.</p>
+      <p>3.3. Por meio da plataforma, a CONTRATANTE terá acesso a painel de monitoramento com visualização em tempo real do status de cada entrega, localização dos parceiros entregadores em campo e histórico completo das operações, podendo enviar link de rastreamento ao cliente final.</p>
+      <p>3.4. O despacho automático dos pedidos será realizado pelo sistema, que identificará o parceiro entregador disponível mais adequado, considerando localização, proximidade e capacidade operacional, sem necessidade de intervenção manual da CONTRATANTE.</p>
+      <p>3.5. A CONTRATANTE compromete-se a manter ativas e atualizadas as integrações necessárias ao funcionamento do sistema, bem como a disponibilizar as credenciais de acesso e informações operacionais solicitadas pela CONTRATADA para fins de configuração e manutenção da plataforma.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA QUARTA — DOS PARCEIROS ENTREGADORES E DA AUSÊNCIA DE VÍNCULO TRABALHISTA</p>
+      <p>4.1. Os parceiros entregadores que atuam na operação são trabalhadores autônomos que mantêm relação de parceria exclusivamente com a CONTRATADA, nos termos de contratos específicos celebrados entre as partes, sendo sua gestão, coordenação, remuneração e responsabilidade civil e trabalhista de competência exclusiva da CONTRATADA.</p>
+      <p>4.2. A CONTRATANTE não possui, em nenhuma hipótese, relação de emprego, vínculo trabalhista, responsabilidade previdenciária, fiscal ou civil com os parceiros entregadores, cabendo à CONTRATADA a gestão integral desse relacionamento operacional, nos termos do art. 4º-A, §1º, da Lei nº 13.467/2017.</p>
+      <p>4.3. Os parceiros entregadores atuam com plena autonomia, definindo seus próprios horários de disponibilidade, podendo aceitar ou recusar demandas, prestar serviços a terceiros e não estando sujeitos a controle de jornada, exclusividade ou subordinação jurídica perante a CONTRATANTE.</p>
+      <p>4.4. Eventual reclamatória trabalhista ajuizada por parceiro entregador em face da CONTRATANTE será de responsabilidade exclusiva da CONTRATADA, que deverá assumir o polo passivo da ação, arcar com todos os custos processuais e indenizar a CONTRATANTE por quaisquer prejuízos decorrentes de condenação judicial relacionada à operação, sem prejuízo do direito de regresso.</p>
+      <p>4.5. A CONTRATADA declara que mantém contratos formalizados com cada parceiro entregador, com cláusulas que afastam expressamente a existência de vínculo empregatício, pessoalidade obrigatória e exclusividade, em conformidade com a legislação trabalhista vigente.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA QUINTA — DAS RESPONSABILIDADES DA CONTRATADA</p>
+      <p>5.1. Compete à CONTRATADA: (i) estruturar e manter a operação logística em pleno funcionamento durante os horários de atendimento estabelecidos; (ii) disponibilizar parceiros entregadores em número suficiente para atender à demanda operacional prevista; (iii) gerenciar a escala de trabalho dos parceiros entregadores conforme o volume de pedidos e os horários de pico mapeados; (iv) acompanhar a execução de cada entrega por meio da plataforma tecnológica; (v) prestar suporte operacional em tempo real durante os turnos de funcionamento; (vi) registrar, tratar e reportar todas as ocorrências operacionais que impactem a qualidade ou o prazo das entregas; (vii) fornecer relatório semanal toda segunda-feira e relatório mensal consolidado até o 5º dia útil do mês seguinte; e (viii) manter canal de comunicação direto e humanizado com a equipe da CONTRATANTE.</p>
+      <p>5.2. A CONTRATADA compromete-se a manter a operação estruturada conforme os parâmetros de escala definidos em comum acordo com a CONTRATANTE, realizando os ajustes necessários sempre que houver variação relevante no volume de pedidos, respeitados os prazos operacionais necessários para a mobilização de parceiros adicionais.</p>
+      <p>5.3. Em caso de ausência não programada de parceiro entregador durante turno reservado, a CONTRATADA responsabiliza-se por providenciar a substituição no menor tempo possível, comunicando a CONTRATANTE sobre eventual impacto operacional e adotando as medidas necessárias para minimizar prejuízos.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA SEXTA — DAS RESPONSABILIDADES DA CONTRATANTE</p>
+      <p>6.1. Compete à CONTRATANTE: (i) assegurar a correta preparação, conferência e embalagem dos pedidos antes da entrega ao parceiro entregador; (ii) liberar os pedidos no tempo adequado para que os prazos de entrega sejam cumpridos; (iii) manter atualizadas as informações operacionais necessárias ao funcionamento da integração tecnológica; (iv) comunicar à CONTRATADA, com antecedência mínima de 48 (quarenta e oito) horas, qualquer alteração relevante no volume esperado de pedidos, incluindo promoções, eventos especiais ou fechamentos temporários; (v) efetuar os pagamentos previstos neste contrato nos prazos estabelecidos; e (vi) manter ativas as integrações necessárias ao funcionamento da plataforma Foody Delivery.</p>
+      <p>6.2. A CONTRATANTE reconhece que falhas atribuíveis à produção interna, embalagem inadequada ou liberação intempestiva de pedidos são de sua exclusiva responsabilidade, não podendo ser imputadas à CONTRATADA.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA SÉTIMA — DA ESTRUTURA FINANCEIRA DA OPERAÇÃO</p>
+      <p>7.1. A remuneração da CONTRATADA pela prestação dos serviços de gestão logística será composta por duas categorias distintas: (i) taxa mensal de gestão logística; e (ii) custos operacionais variáveis de execução das entregas.</p>
+      <p>7.2. A taxa mensal de gestão logística varia conforme o perfil operacional contratado: (i) Plano Básico: R$ 799,00, para até 800 entregas mensais; (ii) Plano Médio: R$ 1.299,00, para até 1.300 entregas mensais; (iii) Plano Contratado: R$ 1.599,00, para até 1.800 entregas mensais; e (iv) Plano Avançado: valor personalizado mediante aditivo, para volumes superiores a 1.800 entregas mensais. O perfil ora contratado é o Plano Contratado (R$ 1.599,00 mensais), conforme identificado no Anexo I, correspondendo à remuneração pelos serviços de organização, coordenação, supervisão, suporte, tecnologia e gestão operacional previstos neste instrumento.</p>
+      <p>7.3. Os custos operacionais variáveis correspondem às diárias dos parceiros entregadores e às taxas por distância percorrida em cada corrida, conforme tabela operacional constante do Anexo I, que integra o presente instrumento para todos os fins de direito.</p>
+      <p>7.4. As diárias dos parceiros entregadores são fixadas em R$ 65,00 (sessenta e cinco reais) por turno de 6 (seis) horas, de terça-feira a quinta-feira, e em R$ 70,00 (setenta reais) por turno nos dias de sexta-feira, sábado, domingo e feriados nacionais, municipais e estaduais.</p>
+      <p>7.5. As taxas por distância percorrida são cobradas por faixa de quilometragem real de cada corrida, nos valores constantes do Anexo I deste instrumento.</p>
+      <p>7.6. A operação logística abrange entregas dentro de raio máximo de 12 (doze) quilômetros a partir do endereço da CONTRATANTE. Entregas que excedam esse raio deverão ser previamente acordadas entre as partes e terão precificação específica definida caso a caso.</p>
+      <p>7.7. A taxa mensal de gestão logística poderá ser reajustada anualmente, com base na variação do IPCA acumulado nos 12 (doze) meses anteriores à data de aniversário do contrato, mediante comunicação prévia de 30 (trinta) dias.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA OITAVA — DO FLUXO FINANCEIRO E DA FORMA DE PAGAMENTO</p>
+      <p>8.1. O fechamento financeiro da operação ocorrerá semanalmente, toda segunda-feira, contemplando todos os valores devidos pela CONTRATANTE referentes à semana operacional imediatamente anterior, compreendendo a fração semanal da taxa de gestão logística, as diárias dos parceiros entregadores e as taxas por distância percorrida nas corridas realizadas.</p>
+      <p>8.2. O pagamento dos valores apurados no fechamento semanal deverá ser realizado pela CONTRATANTE até o final do dia da segunda-feira do fechamento, por meio de transferência bancária, PIX ou outro meio previamente acordado entre as partes, mediante apresentação do demonstrativo financeiro semanal emitido pela CONTRATADA.</p>
+      <p>8.3. O demonstrativo financeiro semanal conterá a discriminação de todos os valores cobrados, incluindo: número de entregas realizadas por dia, distância percorrida em cada corrida, valor unitário e total de cada categoria de custo, além do rateio semanal da taxa de gestão logística.</p>
+      <p>8.4. O atraso no pagamento dos valores devidos implicará a incidência de multa moratória de 2% (dois por cento) sobre o valor em atraso, acrescida de juros de mora de 1% (um por cento) ao mês, calculados pro rata die, nos termos do art. 406 do Código Civil, sem prejuízo da atualização monetária pelo IPCA.</p>
+      <p>8.5. O inadimplemento por período superior a 15 (quinze) dias corridos autoriza a CONTRATADA a suspender a operação logística, mediante comunicação prévia de 48 (quarenta e oito) horas, sem que tal suspensão configure inadimplemento contratual ou gere qualquer direito indenizatório em favor da CONTRATANTE.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA NONA — DA ESTRUTURA TRIBUTÁRIA E DA DOCUMENTAÇÃO FISCAL</p>
+      <p>9.1. A CONTRATADA é optante pelo regime tributário do Simples Nacional, nos termos da Lei Complementar nº 123/2006, emitindo Nota Fiscal de Serviços Eletrônica (NFS-e) exclusivamente sobre o valor da taxa mensal de gestão logística, com destaque do ISS conforme alíquota aplicável à Comarca de Osasco/SP.</p>
+      <p>9.2. Os valores relativos aos custos operacionais de execução das entregas — diárias dos parceiros entregadores e taxas por distância percorrida — não constituem receita da CONTRATADA, correspondendo a repasses destinados à remuneração dos parceiros autônomos, com controle, rastreabilidade e segregação financeira próprios.</p>
+      <p>9.3. A CONTRATADA entregará à CONTRATANTE os seguintes documentos: (i) NFS-e referente à taxa de gestão logística, emitida mensalmente; (ii) relatório semanal de entregas, emitido toda segunda-feira, acompanhado do demonstrativo financeiro da semana; e (iii) relatório mensal consolidado de desempenho logístico, entregue até o 5º (quinto) dia útil do mês seguinte, contendo todos os valores movimentados na operação, segregados por categoria.</p>
+      <p>9.4. A CONTRATANTE, enquadrada no regime de Lucro Real, poderá registrar contabilmente: (i) o valor da taxa de gestão logística, amparado pela NFS-e, como despesa com prestação de serviços de terceiros, dedutível na apuração do IRPJ e da CSLL, nos termos do art. 299 do RIR/2018 e da Lei nº 9.430/1996; e (ii) os custos operacionais de entrega, amparados pelo relatório semanal discriminado, como despesas operacionais logísticas, igualmente dedutíveis nos termos da legislação fiscal vigente.</p>
+      <p>9.5. As partes reconhecem que a estrutura financeira ora estabelecida reflete a realidade econômica da operação, sendo recomendada a validação contábil pelo profissional responsável pela CONTRATANTE para fins de adequado registro e aproveitamento fiscal.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA — DA DOCUMENTAÇÃO OPERACIONAL</p>
+      <p>10.1. A CONTRATADA compromete-se a manter e disponibilizar à CONTRATANTE os seguintes documentos operacionais: (i) relatório semanal de entregas, entregue toda segunda-feira, contendo o total de entregas por dia, horário de coleta e entrega, distância percorrida, identificação do parceiro entregador responsável e ocorrências registradas; (ii) demonstrativo financeiro semanal, entregue conjuntamente com o relatório semanal, contendo todos os valores devidos pela CONTRATANTE referentes à semana; (iii) relatório mensal consolidado de desempenho logístico, entregue até o 5º dia útil do mês seguinte, contendo indicadores de tempo médio de entrega, taxa de ocorrências, volume por período e análise comparativa; e (iv) Nota Fiscal de Serviços Eletrônica referente à taxa de gestão logística, emitida mensalmente.</p>
+      <p>10.2. Todos os documentos operacionais serão emitidos em formato digital, podendo ser encaminhados por e-mail, sistema de gestão compartilhado ou plataforma de comunicação acordada entre as partes, possuindo validade para fins de registro contábil, auditoria fiscal e comprovação da prestação dos serviços.</p>
+      <p>10.3. A CONTRATANTE poderá solicitar, a qualquer tempo, relatórios adicionais sobre aspectos específicos da operação, que deverão ser fornecidos pela CONTRATADA no prazo de até 3 (três) dias úteis a contar da solicitação.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA PRIMEIRA — DA LIMITAÇÃO DE RESPONSABILIDADE</p>
+      <p>11.1. A CONTRATADA não se responsabiliza por falhas, atrasos ou prejuízos decorrentes de: (i) erros na preparação, conferência ou embalagem dos pedidos pela CONTRATANTE; (ii) liberação intempestiva dos pedidos para coleta; (iii) informações incorretas ou incompletas sobre o endereço de entrega fornecidas pelo cliente final; (iv) recusa de recebimento pelo destinatário; (v) caso fortuito ou força maior, incluindo acidentes de trânsito sem culpa do parceiro entregador, bloqueios de vias, eventos climáticos extremos e falhas de infraestrutura urbana; e (vi) falhas nos sistemas de terceiros integrados à operação, incluindo o sistema Web Cardápio e demais plataformas de pedidos online.</p>
+      <p>11.2. A responsabilidade máxima da CONTRATADA por danos materiais diretos causados à CONTRATANTE fica limitada ao valor equivalente a 1 (uma) mensalidade da taxa de gestão logística, excetuados os casos de dolo ou culpa grave devidamente comprovados.</p>
+      <p>11.3. Em nenhuma hipótese a CONTRATADA será responsável por lucros cessantes, danos indiretos, danos morais coletivos ou qualquer outra modalidade de dano que não seja diretamente decorrente de ação ou omissão culposa devidamente comprovada no âmbito da execução deste contrato.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA SEGUNDA — DA VIGÊNCIA</p>
+      <p>12.1. O presente contrato vigorará pelo prazo de 12 (doze) meses, contados da data de início efetivo da operação, que se dará após a implantação da plataforma tecnológica, a integração dos sistemas e o posicionamento da equipe de parceiros entregadores, conforme cronograma de implantação acordado entre as partes.</p>
+      <p>12.2. Findo o prazo contratual, o presente instrumento será automaticamente renovado por períodos iguais e sucessivos de 12 (doze) meses, salvo manifestação expressa em contrário de qualquer das partes, por escrito, com antecedência mínima de 30 (trinta) dias antes do término do período vigente.</p>
+      <p>12.3. A renovação automática prevista no item anterior não implica alteração dos valores contratados, salvo o reajuste anual pelo IPCA previsto na Cláusula Sétima deste instrumento.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA TERCEIRA — DA RESCISÃO</p>
+      <p>13.1. O presente contrato poderá ser rescindido por qualquer das partes, a qualquer tempo, mediante notificação escrita com antecedência mínima de 30 (trinta) dias, nos termos dos arts. 472 e 473 do Código Civil Brasileiro, sem que tal rescisão, observado o prazo de aviso prévio, gere qualquer penalidade à parte que a promoveu.</p>
+      <p>13.2. Constituem causa de rescisão imediata, por culpa da CONTRATANTE: (i) o inadimplemento dos valores devidos por período superior a 15 (quinze) dias corridos; (ii) a prática de atos que comprometam a reputação ou a operação da CONTRATADA; e (iii) o descumprimento de obrigações essenciais previstas neste instrumento, após notificação e prazo de 5 (cinco) dias para regularização.</p>
+      <p>13.3. Constituem causa de rescisão imediata, por culpa da CONTRATADA: (i) a prestação de serviços em desconformidade grave e reiterada com os padrões estabelecidos, após notificação e prazo de 10 (dez) dias para regularização; e (ii) a prática de atos dolosos que causem prejuízo à CONTRATANTE.</p>
+      <p>13.4. Em caso de rescisão imotivada pela CONTRATANTE antes do término do prazo contratual mínimo de 12 (doze) meses, sem a observância do aviso prévio de 30 (trinta) dias, aplicar-se-á a cláusula penal prevista na Cláusula Décima Quarta deste instrumento.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA QUARTA — DA CLÁUSULA PENAL</p>
+      <p>14.1. Em caso de rescisão imotivada do presente contrato pela CONTRATANTE antes do término do prazo contratual mínimo de 12 (doze) meses, sem a observância do aviso prévio de 30 (trinta) dias, fica estipulada multa compensatória equivalente a 20% (vinte por cento) do valor total dos meses remanescentes até o término do prazo contratual mínimo, calculada com base na média dos últimos 3 (três) fechamentos semanais, projetada para o período restante.</p>
+      <p>14.2. A cláusula penal fundamenta-se no art. 412 do Código Civil Brasileiro e no art. 413 do mesmo diploma, que permite ao juiz reduzir equitativamente a pena se a obrigação principal tiver sido cumprida em parte ou se o montante da penalidade for manifestamente excessivo.</p>
+      <p>14.3. A multa prevista nesta cláusula não exclui o direito da CONTRATADA de exigir indenização suplementar pelos prejuízos que o valor da multa não cubra, nos termos do art. 416, parágrafo único, do Código Civil, caso as partes assim o convencionem expressamente em aditivo.</p>
+      <p>14.4. Em caso de rescisão imotivada pela CONTRATADA antes do término do prazo contratual mínimo, sem a observância do aviso prévio de 30 (trinta) dias, fica estipulada multa compensatória equivalente a 20% (vinte por cento) da taxa mensal de gestão logística multiplicada pelo número de meses remanescentes, como compensação pelos custos de reestruturação operacional suportados pela CONTRATANTE.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA QUINTA — DO NÃO ALICIAMENTO</p>
+      <p>15.1. Durante a vigência deste contrato e pelo prazo de 12 (doze) meses após sua rescisão ou término, por qualquer motivo, a CONTRATANTE compromete-se a não contratar, direta ou indiretamente, a título de emprego, prestação de serviços autônomos, parceria ou qualquer outra modalidade de vínculo, qualquer parceiro entregador que tenha atuado na operação gerida pela CONTRATADA nos últimos 6 (seis) meses anteriores ao encerramento do contrato.</p>
+      <p>15.2. A vedação fundamenta-se na proteção do investimento realizado pela CONTRATADA no recrutamento, seleção, treinamento e fidelização de seus parceiros operacionais, constituindo elemento essencial do equilíbrio econômico-financeiro desta relação contratual, nos termos do princípio da boa-fé objetiva previsto no art. 422 do Código Civil.</p>
+      <p>15.3. O descumprimento da obrigação de não aliciamento sujeitará a CONTRATANTE ao pagamento de multa equivalente a R$ 5.000,00 (cinco mil reais) por parceiro entregador aliciado, sem prejuízo da apuração e reparação dos danos adicionais comprovados.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA SEXTA — DA CONFIDENCIALIDADE</p>
+      <p>16.1. As partes obrigam-se, durante a vigência deste contrato e pelo prazo de 24 (vinte e quatro) meses após seu encerramento, a manter absoluto sigilo sobre todas as informações confidenciais a que tiverem acesso em razão deste instrumento, incluindo, sem limitação: dados operacionais, estratégicos e financeiros; modelos de precificação; estrutura de custos; dados de clientes; informações sobre parceiros entregadores; tecnologias e processos utilizados; e quaisquer outras informações designadas como confidenciais por qualquer das partes.</p>
+      <p>16.2. A obrigação de confidencialidade não se aplica às informações que: (i) sejam ou se tornem de domínio público sem culpa da parte receptora; (ii) já eram de conhecimento da parte receptora antes da celebração deste contrato, comprovadamente; (iii) sejam recebidas de terceiros sem restrição de uso; ou (iv) devam ser divulgadas por força de lei, regulamento ou determinação judicial, hipótese em que a parte deverá comunicar a outra previamente, sempre que possível.</p>
+      <p>16.3. O descumprimento da obrigação de confidencialidade sujeitará a parte infratora ao pagamento de multa de R$ 10.000,00 (dez mil reais), sem prejuízo da reparação integral dos danos materiais e morais comprovados, nos termos do art. 927 do Código Civil.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA SÉTIMA — DA PROTEÇÃO DE DADOS PESSOAIS (LGPD)</p>
+      <p>17.1. As partes comprometem-se a observar rigorosamente as disposições da Lei nº 13.709/2018 (LGPD) no tratamento de dados pessoais de clientes finais, parceiros entregadores e demais pessoas físicas cujos dados sejam necessários à execução deste contrato.</p>
+      <p>17.2. Para os fins desta cláusula, a CONTRATANTE atua como controladora dos dados pessoais dos clientes finais que realizam pedidos por seu canal próprio de vendas, sendo responsável pela coleta, armazenamento e uso dessas informações em conformidade com a LGPD. A CONTRATADA atua como operadora no que concerne ao tratamento de dados necessários à execução das entregas.</p>
+      <p>17.3. A CONTRATADA tratará os dados pessoais fornecidos pela CONTRATANTE exclusivamente para as finalidades necessárias à execução dos serviços de gestão logística, sendo vedado o uso para finalidades diversas, o compartilhamento com terceiros não autorizados e o armazenamento além do prazo necessário à prestação dos serviços.</p>
+      <p>17.4. Cada parte compromete-se a adotar medidas técnicas e administrativas adequadas para proteger os dados pessoais tratados no âmbito deste contrato contra acesso não autorizado, situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão, nos termos do art. 46 da LGPD.</p>
+      <p>17.5. Em caso de incidente de segurança que possa acarretar risco ou dano relevante aos titulares, a parte que tomar conhecimento do incidente comunicará a outra no prazo de 48 (quarenta e oito) horas, adotando as medidas corretivas necessárias e procedendo à notificação à ANPD quando exigível.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA OITAVA — DAS COMUNICAÇÕES FORMAIS</p>
+      <p>18.1. Todas as comunicações formais entre as partes deverão ser realizadas por escrito, por meio de: (i) correspondência eletrônica (e-mail) para os endereços indicados no preâmbulo deste instrumento, com confirmação de recebimento; (ii) aplicativo de mensagens instantâneas (WhatsApp) para os números indicados, com confirmação de leitura; ou (iii) notificação extrajudicial enviada por Cartório de Títulos e Documentos, para os casos que demandem maior formalidade probatória.</p>
+      <p>18.2. As comunicações realizadas por e-mail ou aplicativo de mensagens instantâneas considerar-se-ão recebidas no momento de sua transmissão, desde que não haja retorno de erro de entrega ou comunicação expressa de alteração do endereço ou número de contato.</p>
+      <p>18.3. As partes comprometem-se a comunicar qualquer alteração em seus dados de contato no prazo de 5 (cinco) dias úteis, sendo de responsabilidade exclusiva da parte omissa os prejuízos decorrentes da não atualização das informações.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA DÉCIMA NONA — DA ASSINATURA DIGITAL</p>
+      <p>19.1. O presente contrato poderá ser celebrado por meio de assinatura eletrônica ou digital, tendo plena validade jurídica nos termos da Medida Provisória nº 2.200-2/2001 e da Lei nº 14.063/2020.</p>
+      <p>19.2. Para fins deste instrumento, são aceitas: (i) assinatura digital certificada por autoridade certificadora credenciada pela ICP-Brasil; (ii) assinatura eletrônica qualificada, nos termos do art. 4º, III, da Lei nº 14.063/2020; e (iii) assinatura eletrônica simples realizada por meio de plataformas especializadas reconhecidas pelo mercado, como DocuSign, ClickSign ou similares.</p>
+      <p>19.3. O documento assinado eletronicamente terá o mesmo valor probante que o documento físico assinado de próprio punho, nos termos do art. 10, §2º, da Medida Provisória nº 2.200-2/2001, sendo admitido como prova em qualquer instância judicial ou administrativa.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA VIGÉSIMA — DAS DISPOSIÇÕES GERAIS</p>
+      <p>20.1. O presente contrato representa o acordo integral entre as partes com relação ao seu objeto, substituindo todas as negociações, entendimentos, propostas e acordos anteriores, escritos ou verbais, relativos ao mesmo objeto.</p>
+      <p>20.2. Qualquer alteração ou aditamento ao presente instrumento somente terá validade se realizado por escrito e assinado por representantes autorizados de ambas as partes.</p>
+      <p>20.3. A tolerância de qualquer das partes quanto ao descumprimento de obrigações pela outra não constituirá novação, renúncia ou alteração contratual, podendo a parte tolerante, a qualquer tempo, exigir o cumprimento das obrigações originalmente pactuadas.</p>
+      <p>20.4. A eventual invalidade ou inexequibilidade de qualquer cláusula ou disposição deste contrato não afetará a validade das demais cláusulas, que permanecerão em pleno vigor — princípio da conservação do negócio jurídico, previsto nos arts. 170 e 184 do Código Civil.</p>
+      <p>20.5. As partes declaram que este contrato foi celebrado de boa-fé, com pleno conhecimento de seu conteúdo e consequências jurídicas, não havendo vício de consentimento de qualquer natureza.</p>
+
+      <p style="font-weight:700;margin-top:24px;">CLÁUSULA VIGÉSIMA PRIMEIRA — DO FORO</p>
+      <p>21.1. Fica eleito o foro da Comarca de Osasco, Estado de São Paulo, para dirimir quaisquer controvérsias oriundas deste instrumento, com renúncia expressa de qualquer outro, por mais privilegiado que seja.</p>
+
+      <p style="margin-top:32px;">Osasco, ______ de __________________________ de 2026.</p>
+
+      <table style="width:100%;border-collapse:collapse;margin-top:32px;">
+        <tr>
+          <td style="width:48%;padding:40px 0 8px;border-top:1px solid #333;text-align:center;font-size:12px;"><strong>CONTRATANTE</strong><br>Pastel da Camila Ltda.<br>CNPJ: 22.920.673/0001-00<br>Camila Rocha — Sócia-Administradora</td>
+          <td style="width:4%;"></td>
+          <td style="width:48%;padding:40px 0 8px;border-top:1px solid #333;text-align:center;font-size:12px;"><strong>CONTRATADA</strong><br>Osasco Express Serviços Ltda – ME<br>CNPJ: 54.707.097/0001-04<br>Representante Legal</td>
+        </tr>
+      </table>
+
+      <p style="margin-top:40px;font-weight:700;">TESTEMUNHAS</p>
+      <table style="width:100%;border-collapse:collapse;margin-top:12px;">
+        <tr>
+          <td style="width:48%;padding:40px 0 8px;border-top:1px solid #aaa;font-size:12px;">1. Nome: ______________________________<br>CPF: ________________________________</td>
+          <td style="width:4%;"></td>
+          <td style="width:48%;padding:40px 0 8px;border-top:1px solid #aaa;font-size:12px;">2. Nome: ______________________________<br>CPF: ________________________________</td>
+        </tr>
+      </table>
+
+      <!-- ANEXO I -->
+      <div style="page-break-before:always;margin-top:48px;padding-top:32px;border-top:2px solid #1B3A6B;">
+        <div style="text-align:center;margin-bottom:24px;">
+          <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;">ANEXO I</div>
+          <div style="font-size:13px;font-weight:700;margin-top:4px;">TABELA OPERACIONAL DE CUSTOS</div>
+          <div style="font-size:11px;color:#555;font-style:italic;margin-top:4px;">Parte integrante do Contrato de Prestação de Serviços de Gestão Logística de Delivery</div>
+        </div>
+
+        <p style="font-weight:700;color:#1B3A6B;margin-bottom:8px;">Taxa Mensal de Gestão Logística</p>
+        <table style="width:100%;border-collapse:collapse;margin-bottom:24px;font-size:12px;">
+          <tr style="background:#1B3A6B;color:#fff;"><th style="padding:8px 12px;text-align:left;">Plano</th><th style="padding:8px 12px;text-align:left;">Limite Mensal de Entregas</th><th style="padding:8px 12px;text-align:left;">Valor Mensal</th></tr>
+          <tr style="background:#f5f7fa;"><td style="padding:8px 12px;border:1px solid #ddd;">Básico</td><td style="padding:8px 12px;border:1px solid #ddd;">Até 800 entregas</td><td style="padding:8px 12px;border:1px solid #ddd;">R$ 799,00</td></tr>
+          <tr style="background:#D6E4F0;font-weight:700;"><td style="padding:8px 12px;border:1px solid #ddd;">Médio ★ Plano Contratado</td><td style="padding:8px 12px;border:1px solid #ddd;">Até 1.800 entregas</td><td style="padding:8px 12px;border:1px solid #ddd;">R$ 1.599,00</td></tr>
+          <tr style="background:#f5f7fa;"><td style="padding:8px 12px;border:1px solid #ddd;">Avançado</td><td style="padding:8px 12px;border:1px solid #ddd;">Acima de 1.800 entregas</td><td style="padding:8px 12px;border:1px solid #ddd;">Personalizado — sob consulta</td></tr>
+        </table>
+
+        <p style="font-weight:700;color:#1B3A6B;margin-bottom:8px;">Diárias por Parceiro Entregador — Turno de 6 Horas</p>
+        <table style="width:100%;border-collapse:collapse;margin-bottom:24px;font-size:12px;">
+          <tr style="background:#1B3A6B;color:#fff;"><th style="padding:8px 12px;text-align:left;">Dia da Semana</th><th style="padding:8px 12px;text-align:left;">Valor por Turno / Parceiro</th></tr>
+          <tr><td style="padding:8px 12px;border:1px solid #ddd;">Terça-feira a Quinta-feira</td><td style="padding:8px 12px;border:1px solid #ddd;">R$ 65,00</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:8px 12px;border:1px solid #ddd;">Sexta-feira, Sábado, Domingo e Feriados</td><td style="padding:8px 12px;border:1px solid #ddd;">R$ 70,00</td></tr>
+        </table>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div>
+            <p style="font-weight:700;color:#1B3A6B;margin-bottom:8px;">Taxas por Distância — Terça a Quinta</p>
+            <table style="width:100%;border-collapse:collapse;font-size:12px;">
+              <tr style="background:#2E5BA8;color:#fff;"><th style="padding:7px 10px;text-align:left;">Distância</th><th style="padding:7px 10px;text-align:left;">Valor por Corrida</th></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">1 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 6,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">2 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 6,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">3 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 7,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">4 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 7,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">5 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 8,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">6 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 9,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">7 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 10,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">8 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 11,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">9 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 12,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">10 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 14,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">11 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 14,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">12 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 15,00</td></tr>
+            </table>
+          </div>
+          <div>
+            <p style="font-weight:700;color:#1B3A6B;margin-bottom:8px;">Taxas por Distância — Sex, Sáb, Dom e Feriados</p>
+            <table style="width:100%;border-collapse:collapse;font-size:12px;">
+              <tr style="background:#C0392B;color:#fff;"><th style="padding:7px 10px;text-align:left;">Distância</th><th style="padding:7px 10px;text-align:left;">Valor por Corrida</th></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">1 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 8,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">2 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 8,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">3 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 8,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">4 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 9,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">5 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 10,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">6 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 10,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">7 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 12,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">8 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 13,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">9 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 14,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">10 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 16,00</td></tr>
+              <tr><td style="padding:7px 10px;border:1px solid #ddd;">11 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 16,00</td></tr>
+              <tr style="background:#f9fafb;"><td style="padding:7px 10px;border:1px solid #ddd;">12 km</td><td style="padding:7px 10px;border:1px solid #ddd;">R$ 16,00</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;font-size:11px;color:#555;font-style:italic;line-height:1.7;">
+          <p>1. Entregas que excedam o raio de 12 km deverão ser previamente acordadas e terão precificação específica definida caso a caso.</p>
+          <p>2. A taxa mensal de gestão logística poderá ser reajustada anualmente pelo IPCA, nos termos da Cláusula Sétima do contrato.</p>
+          <p>3. Os valores acima são válidos para a data de assinatura do contrato, podendo ser atualizados conforme acordado entre as partes mediante aditivo.</p>
+        </div>
+
+        <div style="margin-top:20px;font-size:11px;color:#888;border-top:1px solid #eee;padding-top:12px;">
+          Este contrato foi elaborado em conformidade com: Código Civil Brasileiro (Lei nº 10.406/2002) · Lei nº 13.467/2017 (Reforma Trabalhista) · Lei nº 13.709/2018 (LGPD) · Lei nº 14.063/2020 (Assinatura Eletrônica) · MP nº 2.200-2/2001 (ICP-Brasil) · RIR/2018 · Lei nº 9.430/1996
+        </div>
+      </div>
+    </div><!-- /contratoBody -->
+  </div><!-- /modal inner -->
+</div><!-- /modal -->
+
+<style>
+@media print {
+  body > *:not(#modalContrato) { display: none !important; }
+  #modalContrato { position: static !important; background: none !important; padding: 0 !important; display: block !important; }
+  #modalContrato > div { box-shadow: none !important; border-radius: 0 !important; }
+  #modalContrato [onclick] { display: none !important; }
+}
+</style>
+
+<script>
+function abrirContrato() {
+  document.getElementById('modalContrato').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function fecharContrato() {
+  document.getElementById('modalContrato').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function imprimirContrato() {
+  window.print();
+}
+document.getElementById('modalContrato').addEventListener('click', function(e) {
+  if (e.target === this) fecharContrato();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') fecharContrato();
+});
+</script>
